@@ -1,17 +1,23 @@
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import AppRouter from './routers/AppRouter';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
-import { addExpense } from "./actions/expense";
-import getvisibleExpenses from "./selectors/expense";
-import configureStore from "./store/configureStore";
-import { Provider } from "react-redux";
+import { addExpense } from './actions/expense';
+import getvisibleExpenses from './selectors/expense';
+import configureStore from './store/configureStore';
+import { Provider } from 'react-redux';
 const store = configureStore();
 import 'normalize.css/normalize.css';
 import 'react-dates/lib/css/_datepicker.css';
-import "./firebase/firebase";
+import './firebase/firebase';
+
+// import '@fontsource/roboto/300.css';
+// import '@fontsource/roboto/400.css';
+// import '@fontsource/roboto/500.css';
+// import '@fontsource/roboto/700.css';
+
+console.log('Luiza Ambiel');
 
 // store.dispatch(addExpense({ description: "Water bill", amount: 4, note: "Water integraion", createdAt: 3000 }));
 // store.dispatch(addExpense({ description: "Pìxe bill", amount: 5, note: "Kraken bill", createdAt: 1200 }));
@@ -22,9 +28,9 @@ const visibleExpenses = getvisibleExpenses(state.expenses, state.filters);
 // console.log(visibleExpenses);
 
 const jsx = (
-    <Provider store={store}>
-        <AppRouter />
-    </Provider>
+  <Provider store={store}>
+    <AppRouter />
+  </Provider>
 );
 
 ReactDOM.render(jsx, document.getElementById('app'));

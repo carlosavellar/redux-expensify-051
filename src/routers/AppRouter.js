@@ -7,6 +7,7 @@ import HelpPage from '../components/HelpPage';
 import NotFoundPage from '../components/NotFoundPage';
 import Header from '../components/Header';
 
+console.log('Router');
 class AppRouter extends React.Component {
   render() {
     return (
@@ -22,7 +23,7 @@ class AppRouter extends React.Component {
           </Switch>
         </div>
       </BrowserRouter>
-    )
+    );
   }
 }
 
